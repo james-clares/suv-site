@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterADM.master.cs" Inherits="PM.masterpage.masterADM" %>
+
+<%@ Register Src="~/scripts/admin/userControls/autenticacao.ascx" TagPrefix="uc2" TagName="autenticacao" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <uc2:autenticacao runat="server" id="autenticacao" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../static/css/sb-admin.css" rel="stylesheet" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="page-top">
+
+    <form id="form1" runat="server">
+        <div id="wrapper">
+            <ul class="sidebar navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/scripts/admin/index.aspx">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/scripts/admin/vacinas/index.aspx">
+                        <i class="fas fa-fw fa-chart-area"></i>
+                        <span>Vacinas</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/scripts/admin/usuarios/index.aspx">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Usuarios</span></a>
+                </li>
+            </ul>
+            <div id="content-wrapper">
+
+                <div class="container-fluid">
+                    <div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

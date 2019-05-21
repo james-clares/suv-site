@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterpage.master.cs" Inherits="PM.masterpage.masterpage" %>
+
+<%@ Register Src="~/userControls/rodape.ascx" TagPrefix="uc1" TagName="Rodape" %>
+<%@ Register Src="~/userControls/header.ascx" TagPrefix="uc1" TagName="Header" %>
+<%@ Register Src="~/userControls/autenticacao.ascx" TagPrefix="uc1" TagName="Autenticacao" %>
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head runat="server">
+    <uc1:Autenticacao runat="server" id="Autenticacao" /> 
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="../static/css/template/grid.css" rel="stylesheet" />
+    <link href="../static/css/template/style.css" rel="stylesheet" />
+    <link href="../static/css/template/isotope.css" rel="stylesheet" />
+    <link href="../static/css/template/camera.css" rel="stylesheet" />
+    <link href="../static/css/template/owl.carousel.css" rel="stylesheet" />
+    <script src="../static/js/template/jquery.js"></script>
+    <script src="../static/js/template/jquery-migrate-1.2.1.js"></script>
+    <script src="../static/js/template/jquery.equalheights.js"></script>
+    <script src="../static/js/template/isotope.min.js"></script>
+    <script src="../static/js/template/modal.js"></script>
+    <script src="../static/js/template/TMForm.js"></script>
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <script src="../static/js/template/jquery.mobile.customized.min.js"></script>
+    <!--<![endif]-->
+    <script src="../static/js/template/camera.js"></script>
+    <script src="../static/js/template/owl.carousel.js"></script>
+    <!--[if lt IE 9]>
+    <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+            <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0"
+                 height="42" width="820"
+                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
+        </a>
+    </div>
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+    <![endif]-->
+</head>
+<body>
+    <div class="page">
+
+    <uc1:Header runat="server" id="Header" />
+
+
+        <form id="form1" runat="server">
+            <div>
+                <asp:ContentPlaceHolder ID="cphConteudo" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+
+    </div>
+    <uc1:Rodape runat="server" id="Rodape" />
+
+    <script src="../static/js/template/script.js"></script>
+
+</body>
+</html>
