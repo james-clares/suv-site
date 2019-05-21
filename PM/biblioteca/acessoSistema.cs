@@ -351,6 +351,23 @@ namespace PM.biblioteca
             return dt;
 
         }
+        public bool validarCpf(string cpf) {
+            bool retorno = false;
+            SqlConnection conn = BancoDeDados.CriarConexao();
+            conn.Open();
 
-    }
+            string sql = "SELECT cpf FROM dbo.pm_usuario where cpf='" + cpf+"'";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            string cpfPaciente = cmd.ExecuteScalar().ToString();
+
+            if (cpfPaciente != null)
+            {
+                retorno = true;
+            }
+            else
+                retorno = false;            
+
+            return retorno;
+        }
+    }       
 }

@@ -63,6 +63,7 @@
 				</form>
 
                 <p style="text-align:center; margin-top: 100px;"><a href="cadastro.aspx">Ainda não sou cadastrado</a></p>
+                <p style="text-align:center; margin-top: 100px;"><a href="scripts/admin/login.aspx">Login Funcionário</a></p>
 			</div>
 		</div>
 	</div>

@@ -17,20 +17,21 @@ namespace PM
 
         protected void btnCadastrarUsuario_Click(object sender, EventArgs e)
         {
-
             acessoSistema usuario = new acessoSistema();
 
             string genero = ddlGenero.SelectedValue;
 
-            usuario.CadastrarUsuario(txtCpf.Text, txtNome.Text, txtSenha.Text, txtEmail.Text, genero, txtDataNasc.Text, txtRg.Text, txtEndereco.Text, txtCep.Text, txtTelefone.Text, txtCel.Text);
+            if (usuario.validarCpf(txtCpf.Text))
+            {
+                Response.Write("<script>alert('Já existe um cadastro com este CPF!');</script>");
+            }
+            else
+            {
+                usuario.CadastrarUsuario(txtCpf.Text, txtNome.Text, txtSenha.Text, txtEmail.Text, genero, txtDataNasc.Text, txtRg.Text, txtEndereco.Text, txtCep.Text, txtTelefone.Text, txtCel.Text);
 
-            Response.Write("<script>alert('Cadastro realizado!');</script>");
-
-         
-
-
+                Response.Redirect("index.aspx");
+                Response.Write("<script>alert('Cadastro realizado!');</script>");
+            }
         }
-
-        
     }
 }
