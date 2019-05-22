@@ -21,7 +21,7 @@ namespace PM
 
             string genero = ddlGenero.SelectedValue;
 
-            if (usuario.validarCpf(txtCpf.Text))
+            if (usuario.validarCpf(txtCpf.Text) && txtCpf.Text!=null)
             {
                 Response.Write("<script>alert('Já existe um cadastro com este CPF!');</script>");
             }

@@ -45,19 +45,19 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Senha</label>
-                    <asp:TextBox ID="txtSenha" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtSenha" required="" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label>Nome</label>
-                    <asp:TextBox ID="txtNome" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtNome" required="" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label>CPF</label>
-                    <asp:TextBox ID="txtCpf" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtCpf" required="" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
             <div class="col-md-4">

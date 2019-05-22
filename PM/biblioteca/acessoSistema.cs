@@ -49,17 +49,14 @@ namespace PM.biblioteca
 
             System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(sql, conn);
 
-
             cmd.Parameters.AddWithValue("@cpf", cpf);
             cmd.Parameters.AddWithValue("@nome", nome);
             cmd.Parameters.AddWithValue("@senha", senha);
             cmd.Parameters.AddWithValue("@email", email);
-            cmd.Parameters.AddWithValue("@sexo", coren);
-            cmd.Parameters.AddWithValue("@dataNasc", uf);
-        
+            cmd.Parameters.AddWithValue("@coren", coren);
+            cmd.Parameters.AddWithValue("@uf", uf);       
 
             BancoDeDados.ExecutarComando(cmd);
-
         }
 
         public bool perfilPaciente(string cpf)
