@@ -23,7 +23,7 @@ namespace PM.userControls
 
                 if (String.IsNullOrEmpty(Session["nome"].ToString()))
                 {
-                    Response.Redirect("../index.aspx");
+                    Response.Redirect("../default.aspx");
                 }
                 else
                 {
@@ -32,7 +32,7 @@ namespace PM.userControls
             }
             else
             {
-                Response.Redirect("../index.aspx");
+                Response.Redirect("../default.aspx");
             }
            
         }

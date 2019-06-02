@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/masterADM.Master" AutoEventWireup="true" CodeBehind="inserir-vacina.aspx.cs" Inherits="PM.scripts.admin.usuarios.inserir_vacina" %>
+﻿<%@ Page Title="Cadastro de Vacina" Language="C#" MasterPageFile="~/masterpage/masterADM.Master" AutoEventWireup="true" CodeBehind="inserir-vacina.aspx.cs" Inherits="PM.scripts.admin.usuarios.inserir_vacina" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -29,13 +29,14 @@
                       <asp:ListItem Value="0" Text="Selecione" Selected="True"></asp:ListItem>
                       <asp:ListItem Value="1º dosagem" Text="1º dosagem"></asp:ListItem>
                       <asp:ListItem Value="2º dosagem" Text="2º dosagem"></asp:ListItem>
+                      <asp:ListItem Value="3º dosagem" Text="3º dosagem"></asp:ListItem>
                       <asp:ListItem Value="1º dosagem reforço" Text="1º dosagem reforço"></asp:ListItem>
                       <asp:ListItem Value="2º dosagem reforço" Text="2º dosagem reforço"></asp:ListItem>
                     </asp:DropDownList>
                 </div>
             </div>
             <div class="form-group">
-                <asp:button id="btnSalvar" runat="server" text="Salvar" class="btn btn-primary"  OnClick="btnSalvar_Click"/>
+                <asp:button id="btnSalvar" runat="server" text="Salvar" class="btn btn-success"  OnClick="btnSalvar_Click"/>
                 <asp:button id="btnVoltar" runat="server" text="Voltar" class="btn btn-primary"  OnClick="btnVoltar_Click"/>
             </div>
         </div>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/masterpage.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="PM.pt.servicos.index" %>
+﻿<%@ Page Title="Serviços" Language="C#" MasterPageFile="~/masterpage/masterpage.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="PM.pt.servicos.index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphConteudo" runat="server">
     <section id="content">
    <div class="container">
@@ -62,10 +62,7 @@
                                 </div>
                                
                             </div>
-                        </div>
-                        
-                        
-                       
+                        </div>         
                     </div>
                 </div>
             </div>

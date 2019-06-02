@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 <head runat="server">
-    <title></title>
+    <title>Cadastro de Usuário</title>
     <link href="static/fonts/font-awesome.css" rel="stylesheet" />
     <link href="static/fonts/icon-font.min.css" rel="stylesheet" />
     <link href="static/fonts/material-design-iconic-font.min.css" rel="stylesheet" />
@@ -121,4 +121,3 @@
 		</div>
 	</div>
 </body>
-</html>

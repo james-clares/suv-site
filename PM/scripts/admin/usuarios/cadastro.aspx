@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/masterADM.Master" AutoEventWireup="true" CodeBehind="cadastro.aspx.cs" Inherits="PM.scripts.admin.usuarios.cadastro" %>
+﻿<%@ Page Title="Cadastro de Usuário" Language="C#" MasterPageFile="~/masterpage/masterADM.Master" AutoEventWireup="true" CodeBehind="cadastro.aspx.cs" Inherits="PM.scripts.admin.usuarios.cadastro" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

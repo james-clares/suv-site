@@ -35,8 +35,6 @@ namespace PM.scripts.admin.usuarios
             ltrUf.Text = row["uf"].ToString();
             ltrCoren.Text = row["coren"].ToString();
             ltrDataCadastro.Text = row["dataCadastro"].ToString();
-
-
         }
 
         protected void ListarUsuariosVacinados()
@@ -48,10 +46,6 @@ namespace PM.scripts.admin.usuarios
             lvListaUsuario.DataSource = dt.Rows;
 
             lvListaUsuario.DataBind();
-
-
-
-
         }
     }
 }

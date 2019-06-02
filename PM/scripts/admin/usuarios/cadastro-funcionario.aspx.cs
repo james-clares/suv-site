@@ -17,14 +17,12 @@ namespace PM.scripts.admin.usuarios
 
         protected void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
-
             acessoSistema func = new acessoSistema();
 
             string uf = ddlUf.SelectedValue;
 
             func.CadastrarFuncionario(txtCpf.Text, txtNome.Text, txtSenha.Text, txtEmail.Text, txtCoren.Text, uf);
-
-
+            Response.Redirect("/scripts/admin/usuarios/index.aspx");
 
         }
 

@@ -6,7 +6,7 @@
 <head runat="server">
     <link href="../../static/css/sb-admin.css" rel="stylesheet" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <title>SUV - Login</title>
 </head>
 <body class="bg-dark">
     <div class="container">
@@ -26,11 +26,8 @@
                             <label for="inputPassword">Senha</label>
                         </div>
                     </div>
-                        <asp:Button ID="btnLogin" runat="server" Text="Logar" class="btn btn-primary btn-block" OnClick="btnLogin_Click" />
-
-                   
+                        <asp:Button ID="btnLogin" runat="server" Text="Logar" class="btn btn-primary btn-block" OnClick="btnLogin_Click" />                   
                 </form>
-
             </div>
         </div>
     </div>

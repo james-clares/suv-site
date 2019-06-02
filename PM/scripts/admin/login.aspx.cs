@@ -28,9 +28,7 @@ namespace PM.scripts.admin
                 Session["idFunc"] = idFunc.retornaIdFuncionario(txtEmail.Text);
                 Response.Redirect("/scripts/admin/index.aspx");
             }
-
             Response.Write("<script>alert('E-mail ou senha inválido(os)');</script>");
-
         }
     }
 }

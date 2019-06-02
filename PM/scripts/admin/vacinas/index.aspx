@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/masterADM.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="PM.scripts.admin.vacinas.index" %>
+﻿<%@ Page Title="Vacinas" Language="C#" MasterPageFile="~/masterpage/masterADM.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="PM.scripts.admin.vacinas.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -27,20 +27,13 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="dataTable" style="width:100%" cellspacing:"0">
                     <thead>
                         <tr>
                             <th>Vacina</th>
                             <th>Lote</th>
                             <th>Data Cadastro</th>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Vacina</th>
-                            <th>Lote</th>
-                            <th>Data Cadastro</th>
-                        </tr>
-                    </tfoot>
+                    </thead>                    
                     <tbody>
                         <asp:ListView runat="server" ID="lvListaVacina" >
                             <ItemTemplate>

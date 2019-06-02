@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="PM.index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="PM.index" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Página de Login</title>
     <link href="static/fonts/font-awesome.css" rel="stylesheet" />
     <link href="static/fonts/icon-font.min.css" rel="stylesheet" />
     <link href="static/fonts/material-design-iconic-font.min.css" rel="stylesheet" />
@@ -38,7 +38,8 @@
                  <form id="form1" class="login100-form validate-form" runat="server">
         
 					<span class="login100-form-title p-b-59">
-						Bem Vindo ao Portal!
+						Bem Vindo ao SUV
+                        Sistema Único de Vacinas!
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "E-mail inválido: ex@abc.xyz">
@@ -52,18 +53,13 @@
 						<asp:TextBox ID="txtSenha" required="" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
 						<span class="focus-input100"></span>
 					</div>
-
-				
-
-						<div class="wrap-login100-form-btn">
-							
-							<asp:Button ID="btnLogin" runat="server" Text="Logar" class="login100-form-btn" OnClick="btnLogin_Click"/>
+						<div class="wrap-login100-form-btn">							
+							<asp:Button ID="btnLogin" runat="server" Text="Entrar no Sistema" class="login100-form-btn" OnClick="btnLogin_Click"/>
 						</div>
-
 				</form>
 
                 <p style="text-align:center; margin-top: 100px;"><a href="cadastro.aspx">Ainda não sou cadastrado</a></p>
-                <p style="text-align:center; margin-top: 100px;"><a href="scripts/admin/login.aspx">Login Funcionário</a></p>
+                <p style="text-align:center;margin-top: 10px;"><a href="scripts/admin/login.aspx">Login Funcionário</a></p>
 			</div>
 		</div>
 	</div>

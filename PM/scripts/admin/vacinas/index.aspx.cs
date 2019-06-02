@@ -14,7 +14,6 @@ namespace PM.scripts.admin.vacinas
         {
             lvListaVacina.ItemDataBound += LvListaVacina_ItemDataBound;
             ListarVacinas();
-
         }
 
         private void LvListaVacina_ItemDataBound(object sender, ListViewItemEventArgs e)
@@ -27,23 +26,14 @@ namespace PM.scripts.admin.vacinas
             ltrNomeVacina.Text = row["nomeVacina"].ToString();
             ltrLote.Text = row["lote"].ToString();
             ltrDataCadastro.Text = row["dataCadastro"].ToString();
-
-
         }
 
         protected void ListarVacinas()
         {
-            PM.biblioteca.vacinas acesso = new PM.biblioteca.vacinas();
-            
+            biblioteca.vacinas acesso = new biblioteca.vacinas();            
             DataTable dt = acesso.RetornarVacinas();
-
             lvListaVacina.DataSource = dt.Rows;
-
             lvListaVacina.DataBind();
-
-
-               
-               
         }
     }
 }

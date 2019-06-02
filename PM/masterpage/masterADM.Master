@@ -22,7 +22,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/scripts/admin/index.aspx">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard</span>
+                        <span>Página Inicial</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -33,7 +33,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/scripts/admin/usuarios/index.aspx">
                         <i class="fas fa-fw fa-table"></i>
-                        <span>Usuarios</span></a>
+                        <span>Usuários</span></a>
                 </li>
             </ul>
             <div id="content-wrapper">

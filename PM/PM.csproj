@@ -70,7 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cadastro.aspx" />
-    <Content Include="index.aspx" />
+    <Content Include="default.aspx" />
     <Content Include="pt\index.aspx" />
     <Content Include="pt\perfil\index.aspx" />
     <Content Include="pt\servicos\index.aspx" />
@@ -199,12 +199,12 @@
     <Compile Include="cadastro.aspx.designer.cs">
       <DependentUpon>cadastro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
     </Compile>
     <Compile Include="masterpage\masterADM.Master.cs">
       <DependentUpon>masterADM.Master</DependentUpon>

@@ -13,26 +13,22 @@ namespace PM.scripts.admin.usuarios
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (!IsPostBack)
             {
-
                 CarregarPacientes();
                 CarregarVacinas();
-
-
             }
         }
 
         private void CarregarPacientes()
         {
-            PM.biblioteca.vacinas vacinaPaciente = new PM.biblioteca.vacinas()
+            biblioteca.vacinas vacinaPaciente = new biblioteca.vacinas()
             {
                 Codigo = "",
                 Descricao = "Selecione..."
             };
 
-            List<PM.biblioteca.vacinas> vacinas = new List<PM.biblioteca.vacinas>();
+            List<biblioteca.vacinas> vacinas = new List<biblioteca.vacinas>();
 
             DataSet ds = vacinaPaciente.RecuperarPaciente();
             DataRowCollection linhas = ds.Tables[0].Rows;
@@ -56,13 +52,13 @@ namespace PM.scripts.admin.usuarios
 
         private void CarregarVacinas()
         {
-            PM.biblioteca.vacinas vacinaPaciente = new PM.biblioteca.vacinas()
+            biblioteca.vacinas vacinaPaciente = new biblioteca.vacinas()
             {
                 Codigo = "",
                 Descricao = "Selecione..."
             };
 
-            List<PM.biblioteca.vacinas> vacinas = new List<PM.biblioteca.vacinas>();
+            List<biblioteca.vacinas> vacinas = new List<biblioteca.vacinas>();
 
             DataSet ds = vacinaPaciente.RecuperarVacina();
             DataRowCollection linhas = ds.Tables[0].Rows;
@@ -95,7 +91,7 @@ namespace PM.scripts.admin.usuarios
             biblioteca.vacinas inserirVacina = new biblioteca.vacinas();
 
             inserirVacina.CadastrarVacinasUsuario(vacina, paciente, dosagem, idFunc);
-
+            Response.Redirect("/scripts/admin/usuarios/index.aspx");
         }
 
         protected void btnVoltar_Click(object sender, EventArgs e)

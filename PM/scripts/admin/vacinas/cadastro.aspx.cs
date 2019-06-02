@@ -16,11 +16,10 @@ namespace PM.scripts.admin.vacinas
         }
         protected void btnSalvarVacina_Click(object sender, EventArgs e)
         {
-            PM.biblioteca.vacinas novaVacina = new PM.biblioteca.vacinas();
+            biblioteca.vacinas novaVacina = new biblioteca.vacinas();
 
             novaVacina.CadastraVacina(txtNome.Text, txtLote.Text);
-
-
+            Response.Redirect("/scripts/admin/vacinas/index.aspx");
         }
 
         protected void btnVoltar_Click(object sender, EventArgs e) {

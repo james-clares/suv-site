@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/masterpage.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="PM.pt.index" %>
+﻿<%@ Page Title="SUV - Página Inicial" Language="C#" MasterPageFile="~/masterpage/masterpage.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="PM.pt.index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphConteudo" runat="server">
     <section id="content">
 <div class="camera-wrapper">
@@ -46,9 +46,6 @@
         </div>
     </div>
 </div>
-
-
-
 </section>
 
 </asp:Content>

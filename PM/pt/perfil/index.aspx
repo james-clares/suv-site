@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/masterpage.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="PM.pt.perfil.index" %>
+﻿<%@ Page Title="Perfil" Language="C#" MasterPageFile="~/masterpage/masterpage.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="PM.pt.perfil.index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphConteudo" runat="server">
     <style>
         .p20 {
@@ -17,13 +17,13 @@
             
                 <div class="p20">
                    <h3>MINHAS VACINAS</h3>
-                   <p>Nesta área você poderá visualizar o seu historico de vacinas.</p>
+                   <p>Nesta área você poderá visualizar o seu histórico de vacinas.</p>
                 </div>
 
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="dataTable" style="width:100%;" cellspacing:"0">
                     <thead>
                         <tr>
                             <th><strong>Nome</strong></th>

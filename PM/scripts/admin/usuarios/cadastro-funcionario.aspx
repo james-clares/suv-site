@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/masterADM.Master" AutoEventWireup="true" CodeBehind="cadastro-funcionario.aspx.cs" Inherits="PM.scripts.admin.usuarios.cadastro_funcionario" %>
+﻿<%@ Page Title="Cadastro de Funcionário" Language="C#" MasterPageFile="~/masterpage/masterADM.Master" AutoEventWireup="true" CodeBehind="cadastro-funcionario.aspx.cs" Inherits="PM.scripts.admin.usuarios.cadastro_funcionario" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -81,7 +81,6 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-
                     <asp:Button ID="Button1" runat="server" Text="Salvar" class="btn btn-success" OnClick="btnCadastrarFuncionario_Click" />
                     <asp:Button ID="btnLogin" runat="server" Text="Voltar" class="btn btn-primary" OnClick="btnVoltar_Click" />
                 </div>

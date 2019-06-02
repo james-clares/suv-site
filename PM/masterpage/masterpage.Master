@@ -4,9 +4,6 @@
 <%@ Register Src="~/userControls/header.ascx" TagPrefix="uc1" TagName="Header" %>
 <%@ Register Src="~/userControls/autenticacao.ascx" TagPrefix="uc1" TagName="Autenticacao" %>
 
-
-
-
 <!DOCTYPE html>
 
 <html lang="pt-BR">

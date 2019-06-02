@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/masterADM.Master" AutoEventWireup="true" CodeBehind="cadastro.aspx.cs" Inherits="PM.scripts.admin.vacinas.cadastro" %>
+﻿<%@ Page Title="Cadastro de Vacina" Language="C#" MasterPageFile="~/masterpage/masterADM.Master" AutoEventWireup="true" CodeBehind="cadastro.aspx.cs" Inherits="PM.scripts.admin.vacinas.cadastro" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -22,7 +22,7 @@
             </div>
             <div class="form-group">
                 
-                <asp:Button ID="Button1" runat="server" Text="Salvar" class="btn btn-primary" OnClick="btnSalvarVacina_Click"/>
+                <asp:Button ID="Button1" runat="server" Text="Salvar" class="btn btn-success" OnClick="btnSalvarVacina_Click"/>
                 <asp:Button ID="btnLogin" runat="server" Text="Voltar" class="btn btn-primary" OnClick="btnVoltar_Click"/>
             </div>
         </div>

@@ -17,11 +17,10 @@ namespace PM.biblioteca
         {
             System.Data.SqlClient.SqlConnection conn = BancoDeDados.CriarConexao();
 
-            string sql = "INSERT INTO pm_usuario VALUES (@cpf, @nome, @senha, 1, @email, @sexo, @dataNasc, @rg, @endereco, @cep, @telefone, @telefoneCel, GETDATE())";
-            
+            string sql = "INSERT INTO pm_usuario VALUES (@cpf, @nome, @senha, 1, @email, @sexo, @dataNasc, @rg, @endereco, @cep, @telefone, @telefoneCel, dateadd(hour,+3,getdate())";
+
             System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(sql, conn);
-            
-            
+
             cmd.Parameters.AddWithValue("@cpf", cpf);
             cmd.Parameters.AddWithValue("@nome", nome);
             cmd.Parameters.AddWithValue("@senha", senha);
@@ -34,34 +33,31 @@ namespace PM.biblioteca
             cmd.Parameters.AddWithValue("@telefone", telefone);
             cmd.Parameters.AddWithValue("@telefoneCel", telefoneCel);
 
-
-
             BancoDeDados.ExecutarComando(cmd);
-
         }
 
 
         public void CadastrarFuncionario(string cpf, string nome, string senha, string email, string coren, string uf)
         {
-            System.Data.SqlClient.SqlConnection conn = BancoDeDados.CriarConexao();
+            SqlConnection conn = BancoDeDados.CriarConexao();
 
-            string sql = "INSERT INTO pm_funcionario VALUES (@cpf, @nome, @senha, @email, @coren, @uf, GETDATE())";
+            string sql = "INSERT INTO pm_funcionario VALUES (@cpf, @nome, @senha, @email, @coren, @uf, dateadd(hour,+3,getdate())";
 
-            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(sql, conn);
+            SqlCommand cmd = new System.Data.SqlClient.SqlCommand(sql, conn);
 
             cmd.Parameters.AddWithValue("@cpf", cpf);
             cmd.Parameters.AddWithValue("@nome", nome);
             cmd.Parameters.AddWithValue("@senha", senha);
             cmd.Parameters.AddWithValue("@email", email);
             cmd.Parameters.AddWithValue("@coren", coren);
-            cmd.Parameters.AddWithValue("@uf", uf);       
+            cmd.Parameters.AddWithValue("@uf", uf);
 
             BancoDeDados.ExecutarComando(cmd);
         }
 
         public bool perfilPaciente(string cpf)
         {
-            System.Data.SqlClient.SqlConnection conn = BancoDeDados.CriarConexao();
+            SqlConnection conn = BancoDeDados.CriarConexao();
 
             string sql = "SELECT 1 from pm_usuario join pm_perfil on pm_usuario.perfil_idPerfil = pm_perfil.idPerfil where pm_perfil.perfil = 'paciente' and pm_usuario.cpf= @cpf";
 
@@ -81,7 +77,7 @@ namespace PM.biblioteca
             catch (Exception)
             {
 
-                
+
             }
 
             if (output == "1")
@@ -97,7 +93,7 @@ namespace PM.biblioteca
 
         public bool perfilADM(string cpf)
         {
-            System.Data.SqlClient.SqlConnection conn = BancoDeDados.CriarConexao();
+            SqlConnection conn = BancoDeDados.CriarConexao();
 
             string sql = "SELECT 1 from pm_usuario join pm_perfil on pm_usuario.perfil_idPerfil = pm_perfil.idPerfil where pm_perfil.perfil = 'adm' and pm_usuario.cpf= @cpf";
 
@@ -127,14 +123,11 @@ namespace PM.biblioteca
             }
 
             return validarUsuario;
-
         }
 
         public bool acessoUsuario(string email, string senha)
         {
-            System.Data.SqlClient.SqlConnection conn = BancoDeDados.CriarConexao();
-
-           
+            SqlConnection conn = BancoDeDados.CriarConexao();
 
             string sql = "SELECT 1 FROM dbo.pm_usuario WHERE email = @email AND senha = @senha";
 
@@ -156,9 +149,9 @@ namespace PM.biblioteca
             {
 
             }
-            
 
-            if(output == "1")
+
+            if (output == "1")
             {
                 validarUsuario = true;
                 return validarUsuario;
@@ -166,14 +159,12 @@ namespace PM.biblioteca
 
             return validarUsuario;
 
-            
+
         }
 
         public bool acessoUsuarioAdm(string email, string senha)
         {
-            System.Data.SqlClient.SqlConnection conn = BancoDeDados.CriarConexao();
-
-
+            SqlConnection conn = BancoDeDados.CriarConexao();
 
             string sql = "SELECT 1 FROM dbo.pm_funcionario WHERE email = @email AND senha = @senha";
 
@@ -209,7 +200,7 @@ namespace PM.biblioteca
         }
 
 
-        public string retornaNome(string email) 
+        public string retornaNome(string email)
         {
             System.Data.SqlClient.SqlConnection conn = BancoDeDados.CriarConexao();
 
@@ -296,7 +287,7 @@ namespace PM.biblioteca
 
         public DataTable RetornarUsuariosVacinados()
         {
-            System.Data.SqlClient.SqlConnection conn = BancoDeDados.CriarConexao();
+            SqlConnection conn = BancoDeDados.CriarConexao();
 
             SqlCommand cmd = new SqlCommand
             {
@@ -307,8 +298,6 @@ namespace PM.biblioteca
                               "INNER JOIN pm_funcionario f ON uv.fk_idFuncionario = f.idFuncionario",
                 CommandType = CommandType.Text
             };
-
-
 
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
 
@@ -322,7 +311,7 @@ namespace PM.biblioteca
 
         public DataTable RetornarUsuarioVacinado(string idUsuario)
         {
-            System.Data.SqlClient.SqlConnection conn = BancoDeDados.CriarConexao();
+            SqlConnection conn = BancoDeDados.CriarConexao();
 
             SqlCommand cmd = new SqlCommand
             {
@@ -334,8 +323,8 @@ namespace PM.biblioteca
                               "WHERE u.idUsuario = @idUsuario",
                 CommandType = CommandType.Text
 
-                
-        };
+
+            };
 
             cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
 
@@ -348,12 +337,13 @@ namespace PM.biblioteca
             return dt;
 
         }
-        public bool validarCpf(string cpf) {
+        public bool validarCpf(string cpf)
+        {
             bool retorno = false;
             SqlConnection conn = BancoDeDados.CriarConexao();
             conn.Open();
 
-            string sql = "SELECT cpf FROM dbo.pm_usuario where cpf='" + cpf+"'";
+            string sql = "SELECT cpf FROM dbo.pm_usuario where cpf='" + cpf + "'";
             SqlCommand cmd = new SqlCommand(sql, conn);
             string cpfPaciente = cmd.ExecuteScalar().ToString();
 
@@ -362,9 +352,9 @@ namespace PM.biblioteca
                 retorno = true;
             }
             else
-                retorno = false;            
+                retorno = false;
 
             return retorno;
         }
-    }       
+    }
 }

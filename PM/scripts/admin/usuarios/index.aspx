@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage/masterADM.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="PM.scripts.admin.usuarios.index" %>
+﻿<%@ Page Title="Usuários" Language="C#" MasterPageFile="~/masterpage/masterADM.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="PM.scripts.admin.usuarios.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -11,8 +11,8 @@
         </div>
         <div class="card-body">
            <div class="form-group">
-              <div class="col-md-4">
-               <a href="cadastro.aspx"><div class="btn btn-primary">Novo Usuario</div></a>
+              <div class="col-md-6">
+               <a href="cadastro.aspx"><div class="btn btn-primary">Novo Usuário</div></a>
                <a href="inserir-vacina.aspx"><div class="btn btn-primary">Inserir Vacina</div></a>
                <a href="cadastro-funcionario.aspx"><div class="btn btn-primary">Novo Funcionário</div></a>
               </div>
@@ -26,28 +26,17 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="dataTable" style="width:100%" cellspacing:"0">
                     <thead>
                         <tr>
                             <th>Nome</th>
                             <th>Vacina</th>
                             <th>Lote</th>
                             <th>Dosagem</th>
-                            <th>UF aplicador</th>
-                            <th>Coren aplicador</th>
+                            <th>UF Aplicador</th>
+                            <th>Coren Aplicador</th>
                             <th>Data Cadastro</th>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Vacina</th>
-                            <th>Lote</th>
-                            <th>Dosagem</th>
-                            <th>UF aplicador</th>
-                            <th>Coren aplicador</th>
-                            <th>Data Cadastro</th>
-                        </tr>
-                    </tfoot>
+                    </thead>                   
                     <tbody>
                         <asp:ListView runat="server" ID="lvListaUsuario" >
                             <ItemTemplate>
@@ -68,6 +57,7 @@
         </div>
         
     </div>
+
     <script src="../../../static/js/jquery-3.0.0.min.js"></script>
     <script src="../../../static/js/jquery.dataTables.js"></script>
     <script src="../../../static/js/dataTables.bootstrap4.js"></script>
